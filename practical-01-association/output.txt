@@ -1,0 +1,65 @@
+Shape of dataset: (442, 11)
+
+First 5 rows:
+        age       sex       bmi        bp        s1        s2        s3        s4        s5        s6  progression
+0  0.038076  0.050680  0.061696  0.021872 -0.044223 -0.034821 -0.043401 -0.002592  0.019907 -0.017646        151.0
+1 -0.001882 -0.044642 -0.051474 -0.026328 -0.008449 -0.019163  0.074412 -0.039493 -0.068332 -0.092204         75.0
+2  0.085299  0.050680  0.044451 -0.005670 -0.045599 -0.034194 -0.032356 -0.002592  0.002861 -0.025930        141.0
+3 -0.089063 -0.044642 -0.011595 -0.036656  0.012191  0.024991 -0.036038  0.034309  0.022688 -0.009362        206.0
+4  0.005383 -0.044642 -0.036385  0.021872  0.003935  0.015596  0.008142 -0.002592 -0.031988 -0.046641        135.0
+
+Missing values per column:
+age            0
+sex            0
+bmi            0
+bp             0
+s1             0
+s2             0
+s3             0
+s4             0
+s5             0
+s6             0
+progression    0
+dtype: int64
+
+Summary statistics:
+           age      sex      bmi       bp       s1       s2       s3       s4       s5       s6  progression
+count  442.000  442.000  442.000  442.000  442.000  442.000  442.000  442.000  442.000  442.000      442.000
+mean    -0.000    0.000   -0.000   -0.000   -0.000    0.000   -0.000   -0.000    0.000    0.000      152.133
+std      0.048    0.048    0.048    0.048    0.048    0.048    0.048    0.048    0.048    0.048       77.093
+min     -0.107   -0.045   -0.090   -0.112   -0.127   -0.116   -0.102   -0.076   -0.126   -0.138       25.000
+25%     -0.037   -0.045   -0.034   -0.037   -0.034   -0.030   -0.035   -0.039   -0.033   -0.033       87.000
+50%      0.005   -0.045   -0.007   -0.006   -0.004   -0.004   -0.007   -0.003   -0.002   -0.001      140.500
+75%      0.038    0.051    0.031    0.036    0.028    0.030    0.029    0.034    0.032    0.028      211.500
+max      0.111    0.051    0.171    0.132    0.154    0.199    0.181    0.185    0.134    0.136      346.000
+
+Dependent variable  : progression
+Independent variables: ['age', 'sex', 'bmi', 'bp', 's1', 's2', 's3', 's4', 's5', 's6']
+
+Correlation of each variable with progression :
+bmi    0.586
+s5     0.566
+bp     0.441
+s4     0.430
+s6     0.382
+s1     0.212
+age    0.188
+s2     0.174
+sex    0.043
+s3    -0.395
+Name: progression, dtype: float64
+
+Association summary with progression :
+Variable      r  r_squared  p_value Direction         Strength Significant(p<0.05)
+     bmi  0.586      0.344 3.47e-42  Positive         Moderate                 Yes
+      s5  0.566      0.320 8.83e-39  Positive         Moderate                 Yes
+      bp  0.441      0.195 1.65e-22  Positive         Moderate                 Yes
+      s4  0.430      0.185 2.30e-21  Positive         Moderate                 Yes
+      s3 -0.395      0.156 6.16e-18  Negative             Weak                 Yes
+      s6  0.382      0.146 7.58e-17  Positive             Weak                 Yes
+      s1  0.212      0.045 6.92e-06  Positive             Weak                 Yes
+     age  0.188      0.035 7.06e-05  Positive Very weak / none                 Yes
+      s2  0.174      0.030 2.36e-04  Positive Very weak / none                 Yes
+     sex  0.043      0.002 3.66e-01  Positive Very weak / none                  No
+
+Conclusion: 'bmi' has the strongest association with progression (r = 0.586, positive, moderate).
