@@ -1,0 +1,33 @@
+DEMO MODE: synthetic data, results only show how the pipeline works
+Samples: 600 | Fake: 308 | Real: 292
+Example text: officials school city year road police year budget today banned
+Missing text values: 0
+Training samples: 480 | Testing samples: 120
+Text feature size: 1114
+Image feature type: colour statistics | size: 30
+
+Model comparison on the test set:
+               Model  Accuracy  F1 (fake)
+           Text only    0.7417     0.7669
+          Image only    0.6667     0.6552
+Fused (text + image)    0.7500     0.7581
+
+Classification report (fused model):
+              precision    recall  f1-score   support
+
+        real       0.74      0.74      0.74        58
+        fake       0.76      0.76      0.76        62
+
+    accuracy                           0.75       120
+   macro avg       0.75      0.75      0.75       120
+weighted avg       0.75      0.75      0.75       120
+
+Confusion matrix (rows = actual, columns = predicted):
+[[43 15]
+ [15 47]]
+
+Words most linked to REAL news : statement, university, announced, report, study, according, research, council
+Words most linked to FAKE news : hoax, shocking, conspiracy, miracle, leaked, secret, banned, exposed
+
+DEMO MODE: synthetic data, results only show how the pipeline works
+Conclusion: text-only accuracy = 0.74, image-only = 0.67, fused multimodal = 0.75.
