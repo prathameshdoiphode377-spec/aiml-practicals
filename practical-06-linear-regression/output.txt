@@ -1,0 +1,61 @@
+Shape of dataset: (442, 11)
+Missing values: 0
+
+First 5 rows:
+        age       sex       bmi        bp        s1        s2        s3        s4        s5        s6  progression
+0  0.038076  0.050680  0.061696  0.021872 -0.044223 -0.034821 -0.043401 -0.002592  0.019907 -0.017646        151.0
+1 -0.001882 -0.044642 -0.051474 -0.026328 -0.008449 -0.019163  0.074412 -0.039493 -0.068332 -0.092204         75.0
+2  0.085299  0.050680  0.044451 -0.005670 -0.045599 -0.034194 -0.032356 -0.002592  0.002861 -0.025930        141.0
+3 -0.089063 -0.044642 -0.011595 -0.036656  0.012191  0.024991 -0.036038  0.034309  0.022688 -0.009362        206.0
+4  0.005383 -0.044642 -0.036385  0.021872  0.003935  0.015596  0.008142 -0.002592 -0.031988 -0.046641        135.0
+
+Training samples: 353 | Testing samples: 89
+
+============================================================
+PART A: Simple Linear Regression (bmi -> progression)
+============================================================
+Slope (coefficient): 998.58
+Intercept          : 152.00
+Equation: progression = 152.00 + 998.58 * bmi
+
+Test MAE : 52.26
+Test MSE : 4061.83
+Test RMSE: 63.73
+Test R2  : 0.2334
+
+============================================================
+PART B: Multiple Linear Regression (all 10 features)
+============================================================
+Coefficients (largest effect first):
+s1    -931.49
+s5     736.20
+bmi    542.43
+s2     518.06
+bp     347.70
+s4     275.32
+sex   -241.96
+s3     163.42
+s6      48.67
+age     37.90
+dtype: float64
+Intercept: 151.35
+
+Test MAE : 42.79
+Test MSE : 2900.19
+Test RMSE: 53.85
+Test R2  : 0.4526
+Train R2 : 0.5279
+
+============================================================
+PART C: Linear Regression from scratch (normal equation)
+============================================================
+Intercept (scratch): 152.00 | Slope (scratch): 998.58
+Intercept (sklearn): 152.00 | Slope (sklearn): 998.58
+Both methods give the same line: True
+
+Model comparison on the test set:
+                 Model  RMSE     R2
+     Simple (bmi only) 63.73 0.2334
+Multiple (10 features) 53.85 0.4526
+
+Conclusion: The multiple regression model (R2 = 0.45) explains more of the variation than the simple model using BMI alone (R2 = 0.23), but about half of the variation is still unexplained, so a linear model has limits on this data.
