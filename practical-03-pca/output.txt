@@ -1,0 +1,34 @@
+Shape of dataset: (569, 30)
+Classes: malignant = 212 , benign = 357
+Missing values: 0
+
+Explained variance of first 10 components:
+PC1   variance =  44.27%   cumulative =  44.27%
+PC2   variance =  18.97%   cumulative =  63.24%
+PC3   variance =   9.39%   cumulative =  72.64%
+PC4   variance =   6.60%   cumulative =  79.24%
+PC5   variance =   5.50%   cumulative =  84.73%
+PC6   variance =   4.02%   cumulative =  88.76%
+PC7   variance =   2.25%   cumulative =  91.01%
+PC8   variance =   1.59%   cumulative =  92.60%
+PC9   variance =   1.39%   cumulative =  93.99%
+PC10  variance =   1.17%   cumulative =  95.16%
+
+Components needed for 90% variance: 7
+Components needed for 95% variance: 10
+
+Variance kept by 2 components: 63.24 %
+
+Top 5 features contributing to PC1:
+mean concave points     0.261
+mean concavity          0.258
+worst concave points    0.251
+mean compactness        0.239
+worst perimeter         0.237
+Name: PC1, dtype: float64
+
+Logistic Regression accuracy:
+Using all 30 features       : 0.9825
+Using 10 PCA components      : 0.9737
+
+Conclusion: 10 principal components keep 95% of the information of all 30 features, reducing the data by 67% with only a small drop in accuracy (98.25% to 97.37%).
