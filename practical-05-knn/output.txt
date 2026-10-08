@@ -1,0 +1,47 @@
+Shape of dataset: (150, 4)
+Classes: ['setosa', 'versicolor', 'virginica'] -> counts [50, 50, 50]
+Missing values: 0
+Training samples: 120 | Testing samples: 30
+
+K   CV accuracy   Train accuracy   Test accuracy
+1   0.9417        1.0000           0.9667
+3   0.9583        0.9583           0.9333
+5   0.9667        0.9750           0.9333
+7   0.9583        0.9750           0.9667
+9   0.9583        0.9583           0.9667
+11  0.9583        0.9583           0.9667
+13  0.9500        0.9583           0.9667
+15  0.9500        0.9667           0.9667
+17  0.9583        0.9583           0.9667
+19  0.9417        0.9417           0.9667
+21  0.9333        0.9500           0.9667
+
+Best K (highest cross-validation accuracy): 5
+
+Final model: KNN with K = 5
+Accuracy on test set: 0.9333
+
+Confusion matrix:
+[[10  0  0]
+ [ 0 10  0]
+ [ 0  2  8]]
+
+Classification report:
+              precision    recall  f1-score   support
+
+      setosa       1.00      1.00      1.00        10
+  versicolor       0.83      1.00      0.91        10
+   virginica       1.00      0.80      0.89        10
+
+    accuracy                           0.93        30
+   macro avg       0.94      0.93      0.93        30
+weighted avg       0.94      0.93      0.93        30
+
+
+New sample (sepal length, sepal width, petal length, petal width) = [5.9, 3.0, 5.1, 1.8]
+Predicted species: virginica
+  P(setosa) = 0.000
+  P(versicolor) = 0.400
+  P(virginica) = 0.600
+
+Conclusion: KNN with K = 5 classified the Iris test data with 93.33% accuracy.
