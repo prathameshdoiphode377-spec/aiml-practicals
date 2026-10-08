@@ -1,0 +1,43 @@
+Shape of dataset: (150, 4)
+
+First 5 rows:
+   sepal length (cm)  sepal width (cm)  petal length (cm)  petal width (cm)
+0                5.1               3.5                1.4               0.2
+1                4.9               3.0                1.4               0.2
+2                4.7               3.2                1.3               0.2
+3                4.6               3.1                1.5               0.2
+4                5.0               3.6                1.4               0.2
+
+Missing values: 0
+
+K  Inertia(WCSS)  Silhouette
+2  222.36         0.5818
+3  139.82         0.4599
+4  114.09         0.3869
+5  90.93          0.3459
+6  81.54          0.3171
+7  72.63          0.3202
+8  62.54          0.3387
+9  55.12          0.3424
+10 47.39          0.3518
+
+K-Means with K=3
+Cluster sizes: [53 50 47]
+Silhouette score: 0.4599
+
+Hierarchical clustering with K=3
+Cluster sizes: [71 49 30]
+Silhouette score: 0.4467
+
+Adjusted Rand Index vs true species (1 = perfect match):
+K-Means      : 0.6201
+Hierarchical : 0.6153
+
+K-Means clusters vs true species:
+Species   0   1   2
+Cluster            
+0         0  39  14
+1        50   0   0
+2         0  11  36
+
+Conclusion: The data forms 3 natural groups. K-Means and hierarchical clustering give similar clusters, found without using any labels.
