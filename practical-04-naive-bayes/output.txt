@@ -1,0 +1,45 @@
+============================================================
+PART A: Gaussian Naive Bayes (Wine dataset)
+============================================================
+Shape of dataset: (178, 13)
+Classes: ['class_0', 'class_1', 'class_2'] -> counts [59, 71, 48]
+Missing values: 0
+Training samples: 142 | Testing samples: 36
+
+Class priors P(class): [0.331, 0.401, 0.268]
+
+Accuracy on test set: 0.9722
+
+Confusion matrix:
+[[12  0  0]
+ [ 1 13  0]
+ [ 0  0 10]]
+
+Classification report:
+              precision    recall  f1-score   support
+
+     class_0       0.92      1.00      0.96        12
+     class_1       1.00      0.93      0.96        14
+     class_2       1.00      1.00      1.00        10
+
+    accuracy                           0.97        36
+   macro avg       0.97      0.98      0.97        36
+weighted avg       0.97      0.97      0.97        36
+
+5-fold cross-validation accuracy: [0.944, 0.972, 0.972, 0.943, 1.0]
+Mean cross-validation accuracy  : 0.9663
+
+Prediction for one test sample:
+  P(class_0) = 1.0000
+  P(class_1) = 0.0000
+  P(class_2) = 0.0000
+  Predicted class: class_0 | Actual class: class_0
+
+============================================================
+PART B: Multinomial Naive Bayes (small spam filter demo)
+============================================================
+'free prize click now' -> SPAM (P(spam) = 0.994)
+'project report due tomorrow' -> NOT SPAM (P(spam) = 0.045)
+'win cash offer today' -> SPAM (P(spam) = 0.953)
+
+Conclusion: Gaussian Naive Bayes classified the Wine data with 97.22% test accuracy (mean 5-fold CV 96.63%). Multinomial Naive Bayes correctly separated spam from normal messages in the text demo.
